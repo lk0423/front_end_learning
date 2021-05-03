@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://sc.chinaz.com/?w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://sc.chinaz.com/?w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Win8 Metro风格网址导航页面 - 站长素材</title>
+
+<link rel="stylesheet" href="css/metro.css">
+
+<script type="text/javascript" src="script/jquery-1.4.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var box_h=$("#metro_box").height();
+	var box_w=$("#metro_box").width();
+	$("#metro_box").css("margin-top",(($(window).height()-box_h)/2)-10+"px");
+	//var img_h=$(".arr_left img").height();
+	//var img_w=$(".arr_left img").width();
+	//$(".prev").css("position","absolute").css("left","10px").css("top",($(window).height()-img_h)/2);
+	//$(".next").css("position","absolute").css("right","10px").css("top",($(window).height()-img_h)/2);
+	//链接在新窗口打开
+	$(".a_link dd a").attr("target","_blank");
+	$(".a_link ul li>a").hover(function(){
+		var a_href=$(this).attr("href");			
+		$(this).siblings().find("a").attr("href",a_href);
+	});
+	
+	// 切屏-----------------------------------------------------------------
+	$("#top dl dd a").click(function(){
+		var now_class=$(this).attr("class");	
+		$("#top dl dd a.a_index").attr("class","a_index");
+		$("#top dl dd a.a_mzdw").attr("class","a_mzdw");
+		$("#top dl dd a.a_spyy").attr("class","a_spyy");
+		$("#top dl dd a.a_xwzx").attr("class","a_xwzx");
+		$("#top dl dd a.a_gwtb").attr("class","a_gwtb");
+		$("#top dl dd a.a_yxyl").attr("class","a_yxyl");
+		$("#top dl dd a.a_sygj").attr("class","a_sygj");
+		$("#top dl dd a.a_yszy").attr("class","a_yszy");
+		$(this).attr("class",now_class).addClass(now_class+"_h");			
+		var index=$(this).index();
+		$("#metro_box dd").hide();
+		$("#metro_box dd").eq(index).toggle(100);
+		if(index==1){
+			$("body").attr("class","bg0");	
+		}
+		switch (index){
+			case 0:
+				$("body").attr("class","bg");						
+				break;
+			case 1:
+				$("body").attr("class","bg0");					
+				break;
+			case 2:
+				$("body").attr("class","bg1");						
+				break;
+			case 3:
+				$("body").attr("class","bg2");					
+				break;
+			case 4:
+				$("body").attr("class","bg3");					
+				break;
+			case 5:
+				$("body").attr("class","bg4");						
+				break;	
+			case 6:
+				$("body").attr("class","bg5");						
+				break;	
+			default :
+				$("body").attr("class","bg6");						
+		}
+		
+		<!--[if IE 6]>$("#metro_box dd").eq(index).show(300);<![endif]-->			
+	});
+});
+</script>
+</head>
+<body>
+<!--头部导航开始-->
+<div id="top">
+	<dl>
+		<dt><a href="#" target="_blank">Win8网址导航</a></dt>
+		<dd>
+			<a class="a_index" href="/" target="_self">首页</a>
+
+			<a class="a_gwtb">购物淘宝</a>
+			<a class="a_yxyl">游戏娱乐</a>
+
+		</dd>
+	</dl>
+</div>
+<!--头部导航结束--> 
+<!--logo区开始-->
+<div id="metro_box" class="a_link">
+	<dl>
+		<dd style="display:none;">
+			<!--购物淘宝-->
+			<ul>
+				<li class="one" id="logo_001"><a href="http://sc.chinaz.com/?taobao/go/chn/tbk_channel/onsale.php?pid=mm_10054659_3403176_13200135&eventid=101329"><img src="images/logo_001a.png" width="240" height="120" alt="taobao"></a><span><a href="#">淘宝网</a></span></li>
+				<li id="logo_002"><a href="http://sc.chinaz.com/?p.yiqifa/c?s=5308bddc&w=253302&c=254&i=160&l=0&e=win8&t=http://sc.chinaz.com/?jd"><img src="images/logo_002a.png" width="240" height="120" alt="京东商城"></a><span><a href="#">京东商城</a></span></li>
+				<li id="logo_003"><a href="http://sc.chinaz.com/?p.yiqifa/c?s=090d5719&w=253302&c=255&i=150&l=0&e=win8&t=http://sc.chinaz.com/?vancl"><img src="images/logo_003a.png" width="240" height="120" alt=""></a><span><a href="#">凡客诚品</a></span></li>
+				<li class="four" id="logo_004"><a href="http://sc.chinaz.com/?p.yiqifa/c?s=ea58a335&w=253302&c=139&i=802&l=0&e=win8&t=http://sc.chinaz.com/?yihaodian/"><img src="images/logo_004a.png" width="240" height="120" alt=""></a><span><a href="#">1号店超市</a></span></li>
+				<li class="one" id="logo_005"><a href="http://sc.chinaz.com/?p.yiqifa/c?s=3870c892&w=253302&c=7069&i=26922&l=0&d=180&e=win8&t=http://sc.chinaz.com/?amazon.cn"><img src="images/logo_005a.png" width="240" height="120" alt=""></a><span><a href="#">亚马逊</a></span></li>
+				<li id="logo_006"><a href="http://sc.chinaz.com/?p.yiqifa/c?s=e5aca906&w=253302&c=280&i=240&l=0&e=win8&t=http://sc.chinaz.com/?newegg.cn"><img src="images/logo_006a.png" width="240" height="120" alt=""></a><span><a href="#">新蛋商城</a></span></li>
+				<li id="logo_007"><a href="http://sc.chinaz.com/?p.yiqifa/c?s=17e2ac8b&w=253302&c=4275&i=4662&l=0&e=win8&t=http://sc.chinaz.com/?m18"><img src="images/logo_007a.png" width="240" height="120" alt=""></a><span><a href="#">麦考林</a></span></li>
+				<li class="four" id="logo_008"><a href="http://sc.chinaz.com/?p.yiqifa/c?s=a2a2a463&w=253302&c=247&i=159&l=0&e=win8&t=http://sc.chinaz.com/?dangdang"><img src="images/logo_008a.png" width="240" height="120" alt=""></a><span><a href="#">当当网</a></span></li>
+				<li class="one" id="logo_009"><a href="http://sc.chinaz.com/?p.yiqifa/c?s=25ffbe45&w=253302&c=4459&i=5662&l=0&e=win8&t=http://sc.chinaz.com/?suning/"><img src="images/logo_009a.png" width="240" height="120" alt=""></a><span><a href="#">苏宁易购</a></span></li>
+				<li id="logo_010"><a href="http://sc.chinaz.com/?p.yiqifa/c?s=ea3b031c&w=253302&c=4018&i=2882&l=0&e=win8&t=http://sc.chinaz.com/?vipshop/"><img src="images/logo_010a.png" width="240" height="120" alt=""></a><span><a href="#">唯品会</a></span></li>
+				<li id="logo_011"><a href="http://sc.chinaz.com/?s.click.taobao/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGKas1PIKp0U37pZuBotzOg7OjeU9mIWS5%2B5UROBz6sq4fiHePnGhf6UrWuOtfD2G6QGcAHIXpjhEtESpuqsRo0a&pid=mm_10054659_0_0"><img src="images/logo_011a.png" width="240" height="120" alt=""></a><span><a href="#">淘宝聚划算</a></span></li>
+				<li class="four" id="logo_012"><a href="http://sc.chinaz.com/?p.yiqifa/c?s=fab51d3d&w=253302&c=5579&i=14922&l=0&e=win8&t=http://sc.chinaz.com/?gome.cn/"><img src="images/logo_012a.png" width="240" height="120" alt=""></a><span><a href="#">国美电器</a></span></li>
+				<li class="one" id="logo_013a"><a href="http://sc.chinaz.com/?p.yiqifa/c?s=3c1c7cd0&w=253302&c=5402&i=11642&l=0&e=win8&t=http://sc.chinaz.com/?bj.meituan/"><img src="images/logo_013a.png" width="240" height="120" alt=""></a><span><a href="#">美团网</a></span></li>
+				<li id="logo_003"><a href="http://sc.chinaz.com/?p.yiqifa/c?s=4f5f315d&w=253302&c=298&i=323&l=0&e=win8&t=http://sc.chinaz.com/?moonbasa/"><img src="images/logo_014a.png" width="240" height="120" alt=""></a><span><a href="#">梦芭莎</a></span></li>
+				<li id="logo_015a"><a href="http://sc.chinaz.com/?s.click.taobao/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGGjlY60oHcc7bkKOQiRcrAgcZzgJmTRAYw2B9ey%2FQ3KJPxcp3%2BvBC%2FFzh7mzpBsjMcR7YLndgk5kgk3iDIb4vdXtkoO07degg%3D%3D"><img src="images/logo_015a.png" width="240" height="120" alt=""></a><span><a href="#">淘宝商城</a></span></li>
+				<li class="four" id="logo_016"><a href="http://sc.chinaz.com/?alipay"><img src="images/logo_016a.png" width="240" height="120" alt=""></a><span><a href="#">支付宝</a></span></li>
+			</ul>
+		</dd>
+	</dl>
+</div>
+<!--logo区结束--> 
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+
+</div>
+</body>
+</html>
